@@ -134,7 +134,7 @@ nav img {
   -webkit-filter: invert(180);
 }
 
-nav .bold {
+nav .active {
   background-color: #d81159;
   border-radius: 50%;
   height: 70px;
@@ -143,8 +143,8 @@ nav .bold {
   bottom: 2em;
 }
 
-nav .bold img,
-nav span {
+nav .active img,
+nav .active span {
   position: relative;
   top: 1em;
 }

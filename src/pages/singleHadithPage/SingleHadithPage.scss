@@ -24,32 +24,9 @@ header img {
     border: 1px ridge rgb(77, 77, 77);
 }
 
-.commentary {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1em;
-}
 
-.commentary > p:nth-child(1) {
-    padding-top: 1em;
-}
 
-.material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
 
-footer {
-    background-color: rgb(30, 30, 30);
-    overflow-x: hidden;
-    padding: 3em;
-    font-size: 0.8em;
-}
-
-footer a {
-    color: white;
-    display: inline-flex;
-    align-items: center;
-}
 
 a {
     font-weight: 500;

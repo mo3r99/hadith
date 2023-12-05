@@ -13,10 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -27,5 +23,22 @@
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .active {
+    background-color: #d81159;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    position: relative;
+    bottom: 2em;
+  }
+
+  .active img,
+  .active span {
+    position: relative;
+    top: 1em;
   }
 }

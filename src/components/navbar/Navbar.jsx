@@ -20,25 +20,41 @@ function Navbar() {
             <span>Home</span>
           </NavLink>
         </li>
-        <li>
+        <li
+          className={({ isActive, isPending }) =>
+            isPending ? Styles.pending : isActive ? Styles.active : ""
+          }
+        >
           <NavLink to="/collections">
             <img src={collectionsLogo} />
             <span>Collections</span>
           </NavLink>
         </li>
-        <li className={Styles.bold}>
+        <li
+          className={({ isActive, isPending }) =>
+            isPending ? Styles.pending : isActive ? Styles.active : ""
+          }
+        >
           <NavLink to="/hadith/1/1">
             <img src={currentLogo} />
             <span>Current</span>
           </NavLink>
         </li>
-        <li className={Styles.right}>
+        <li
+          className={({ isActive, isPending }) =>
+            isPending ? Styles.pending : isActive ? Styles.active : ""
+          }
+        >
           <NavLink to="/favourites">
             <img src={favouritesLogo} />
             <span>Favourites</span>
           </NavLink>
         </li>
-        <li className={Styles.right}>
+        <li
+          className={({ isActive, isPending }) =>
+            isPending ? Styles.pending : isActive ? Styles.active : ""
+          }
+        >
           <NavLink to="/settings">
             <img src={settingsLogo} />
             <span>Settings</span>

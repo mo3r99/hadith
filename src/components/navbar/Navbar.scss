@@ -1,0 +1,58 @@
+.navBar {
+    padding: 20px;
+    .container {
+        max-width: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left {
+        flex: 1;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 5rem;
+        .item {
+            display: flex;
+            align-items: center;
+
+            flex-direction: column;
+        }
+    }
+
+    .middle {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .right {
+        flex: 1;
+
+        display: flex;
+        justify-content: right;
+
+        align-items: center;
+        gap: 5rem;
+        .item {
+            display: flex;
+            align-items: center;
+
+            flex-direction: column;
+        }
+    }
+
+    img {
+        width: 30px;
+        filter: invert(180);
+        -webkit-filter: invert(180);
+    }
+}

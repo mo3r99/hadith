@@ -1,0 +1,10 @@
+.commentary {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+.commentary > p:nth-child(1) {
+    padding-top: 1em;
+}
+

@@ -2,5 +2,7 @@
 How to run:
 
 cd into folder
+
 npm install
+
 npm run dev

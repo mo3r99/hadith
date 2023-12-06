@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  transition: all 0.3s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -34,6 +42,7 @@
     width: 70px;
     position: relative;
     bottom: 2em;
+    transition: all 0.3s ease;
   }
 
   .active img,

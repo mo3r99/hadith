@@ -2,13 +2,12 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const HadithComponent = () => {
     const params = useParams();
     const book = params.book;
     const hadithId = params.id;
-
-    // const VITE_API_KEY = process.env.REACT_APP_HADITH_API_KEY;
 
     const getHadith = async () => {
         try {
@@ -17,7 +16,7 @@ const HadithComponent = () => {
                 {
                     params: {
                         book: book,
-                        id: hadithId,
+                        hadithNumber: hadithId,
                     },
                 }
             );
@@ -37,15 +36,18 @@ const HadithComponent = () => {
     if (isLoading) return <div>Loading...</div>;
     if (isError) return <div>Error loading data</div>;
 
-    console.log();
+    console.log(hadithData?.hadiths.data);
 
     return (
         <div className="hadithComponent">
             <header>
                 <h2>
-                    <span className="material-symbols-outlined back_home">
-                        arrow_back_ios_new
-                    </span>
+                    <Link to="/" className="link">
+                        <span className="material-symbols-outlined back_home">
+                            arrow_back_ios_new
+                        </span>
+                    </Link>
+
                     {hadithData?.hadiths.data[0].book.bookName}
                 </h2>
             </header>

@@ -2,7 +2,7 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import SingleHadith from "./pages/singleHadith/SingleHadith";
+import SingleHadithPage from "./pages/singleHadithPage/SingleHadithPage";
 import Footer from "./components/footer/Footer";
 import Collections from "./pages/collections/Collections";
 import Favourites from "./pages/favourites/Favourites";
@@ -30,7 +30,7 @@ function App() {
         },
         {
           path: "/hadith/:book/:id",
-          element: <SingleHadith />,
+          element: <SingleHadithPage />,
         },
         {
           path: "/collections",

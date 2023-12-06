@@ -25,8 +25,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li
-          className={({ isActive, isPending }) =>
-            isPending ? Styles.pending : isActive ? Styles.active : ""
+          className={({ isActive }) =>
+             isActive ? Styles.active : ""
           }
         >
           <NavLink to="/collections">
@@ -35,8 +35,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li
-          className={({ isActive, isPending }) =>
-            isPending ? Styles.pending : isActive ? Styles.active : ""
+          className={({ isActive }) =>
+            isActive ? Styles.active : ""
           }
         >
           <NavLink to={`/hadith/${currentReadingContext.bookName ? currentReadingContext.bookName : 'sahih-bukhari' }/${currentReadingContext.hadithNo}`}>
@@ -45,8 +45,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li
-          className={({ isActive, isPending }) =>
-            isPending ? Styles.pending + "right" : isActive ? Styles.active + "right" : "right"
+          className={({ isActive }) =>
+            isActive ? Styles.active + "right" : "right"
           }
         >
           <NavLink to="/favourites">
@@ -55,8 +55,8 @@ function Navbar() {
           </NavLink>
         </li>
         <li
-          className={({ isActive, isPending }) =>
-            isPending ? Styles.pending : isActive ? Styles.active : ""
+          className={({ isActive }) =>
+            isActive ? Styles.active : ""
           }
         >
           <NavLink to="/settings">

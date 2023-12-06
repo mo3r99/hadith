@@ -1,7 +1,32 @@
 .collections {
   div {
-    opacity: 0.9;
-    backdrop-filter: blur(10px);
-    background-color: rgb(47, 45, 45);
+    background-color: var(--dark-300);
+    transition: all 0.3s ease;
+  }
+
+  a > div:hover, a > div:hover > div {
+    background-color: var(--dark-400);
+  }
+
+  a {
+    all: unset;
+  }
+
+  a:hover {
+    all:unset;
+    cursor: pointer;
+  }
+
+  .engar {
+    display: flex;
+    justify-content: space-between;
+
+    h2:nth-child(1) {
+      font-family: 'Quicksand', sans-serif;
+    }
+
+    h2:nth-child(2) {
+      font-family: 'Kufam', serif;
+    }
   }
 }

@@ -7,16 +7,20 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #343c46;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-* {
-
+  --dark-100: #12191f;
+  --dark-200: #18222b;
+  --light: #f2f6fd;
+  --accent-light: #3b84a5;
+  --accent-dark: #2f424b;
+  --font-light: #f4f4f4;
+  --font-dark: #191919;
 }
 
 .material-symbols-outlined {

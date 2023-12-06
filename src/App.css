@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: rgb(24, 24, 24);
-    color: white;
+    background-color: var(--dark-100);
+    color: var(--font-light);
     overflow-x: hidden;
 }
 

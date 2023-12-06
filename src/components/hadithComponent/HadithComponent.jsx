@@ -12,7 +12,7 @@ const HadithComponent = () => {
     const getHadith = async () => {
         try {
             const response = await axios.get(
-                `https://www.hadithapi.com/public/api/hadiths?apiKey=$2y$10$uNTrissszRc2NBpFeFjfVusflO10VfOEQaZ30PAsVSkl70KhQkLe`,
+                `https://www.hadithapi.com/api/hadiths?book=${book}&hadithNumber=${hadithId}&apiKey=$2y$10$uNTrissszRc2NBpFeFjfVusflO10VfOEQaZ30PAsVSkl70KhQkLe`,
                 {
                     params: {
                         book: book,

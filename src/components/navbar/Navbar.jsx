@@ -35,7 +35,7 @@ function Navbar() {
             isPending ? Styles.pending : isActive ? Styles.active : ""
           }
         >
-          <NavLink to="/hadith/1/1">
+          <NavLink to="/hadith/al-tirmidhi/1">
             <img src={currentLogo} />
             <span>Current</span>
           </NavLink>

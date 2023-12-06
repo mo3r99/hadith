@@ -9,10 +9,6 @@
     border: 1px ridge rgb(77, 77, 77);
 }
 
-
-
-
-
 a {
     font-weight: 500;
     color: #646cff;
@@ -24,7 +20,7 @@ a:hover {
 
 body {
     margin: 0;
-    display: flex;
+
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
@@ -65,4 +61,35 @@ button:focus-visible {
     button {
         background-color: #f9f9f9;
     }
+}
+.hadith {
+    text-align: center;
+    max-width: 1000px;
+    padding: 0 3em;
+    margin: auto;
+}
+
+.hadithComponent {  
+    .heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .back_home {
+            top: 20px;
+            left: 50px;
+            margin-top: 9px;
+        }
+
+        .title{
+            margin: auto;
+        }
+    }
+}
+
+.preload{
+    margin: auto;
+    text-align: center;
+    font-size: 5rem;
 }

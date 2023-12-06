@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./HadithComponent.scss";
+import Preloader from "../preloader/Preloader";
 
 const HadithComponent = () => {
     const params = useParams();
@@ -34,7 +35,7 @@ const HadithComponent = () => {
         isError,
     } = useQuery("hadiths", getHadith);
 
-    if (isLoading) return <div className="preload">فَصَبْرٌ جَمِيلٌ</div>;
+    if (isLoading) return <Preloader />;
     if (isError) return <div className="preload">Error loading data</div>;
 
     console.log(hadithData?.hadiths.data);

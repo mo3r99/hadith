@@ -1,0 +1,23 @@
+.preload{
+    margin: auto;
+    padding: 1em 0;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Kufam', sans-serif;
+    color: rgb(90, 90, 90);
+    animation: pulse 1s infinite ease;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

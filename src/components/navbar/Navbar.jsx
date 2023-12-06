@@ -39,7 +39,7 @@ function Navbar() {
             isPending ? Styles.pending : isActive ? Styles.active : ""
           }
         >
-          <NavLink to={`/hadith/${currentReadingContext.bookName ? currentReadingContext.bookName : 'al-bukhari' }/${currentReadingContext.hadithNo}`}>
+          <NavLink to={`/hadith/${currentReadingContext.bookName ? currentReadingContext.bookName : 'sahih-bukhari' }/${currentReadingContext.hadithNo}`}>
             <img src={currentLogo} />
             <span>Current</span>
           </NavLink>

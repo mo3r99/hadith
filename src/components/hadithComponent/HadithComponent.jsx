@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { HadithContext } from "../../store/AppContext";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
@@ -9,14 +9,18 @@ import Preloader from "../preloader/Preloader";
 
 const HadithComponent = () => {
   const params = useParams();
-  const book = params.book;
-  const hadithId = params.id;
+  let book = params.book;
+  let hadithId = params.id;
+
+  useEffect(() => {
+    book = params.book;
+    hadithId = params.id
+  }, [params])
 
   var hadithCtx = useContext(HadithContext);
   useEffect(() => {
-    console.log('running effect')
     hadithCtx.updateHadith(book, hadithId);
-  }, [])
+  }, [params]);
 
   const getHadith = async () => {
     try {
@@ -42,6 +46,22 @@ const HadithComponent = () => {
     isError,
   } = useQuery("hadiths", getHadith);
 
+  const prevHandler = () => {
+    const {
+      data: hadithData,
+      isLoading,
+      isError,
+    } = useQuery("hadiths", getHadith);
+  }
+
+  const nextHandler = () => {
+    const {
+      data: hadithData,
+      isLoading,
+      isError,
+    } = useQuery("hadiths", getHadith);
+  }
+
   if (isLoading) return <Preloader />;
   if (isError) return <div className="preload">Error loading data</div>;
 
@@ -49,7 +69,7 @@ const HadithComponent = () => {
     <div className="hadithComponent">
       <div className="heading">
         <div className="arrow">
-          <Link to="/" className="link">
+          <Link to="/collections" className="link">
             <span className="material-symbols-outlined back_home">
               arrow_back_ios_new
             </span>
@@ -68,7 +88,15 @@ const HadithComponent = () => {
 
         <div className="textContainer">
           <div className="hadithNumber">
+            <Link onClick={prevHandler} to={`/hadith/${book}/${parseInt(hadithId) - 1}`}>
+              <span className="material-symbols-outlined">arrow_back</span>
+            </Link>
+
             <h2>{hadithData?.hadiths.data[0].hadithNumber}</h2>
+
+            <Link onClick={nextHandler} to={`/hadith/${book}/${parseInt(hadithId) + 1}`}>
+              <span className="material-symbols-outlined">arrow_forward</span>
+            </Link>
           </div>
           <div className="english">
             <p className="arabic">{hadithData?.hadiths.data[0].hadithArabic}</p>

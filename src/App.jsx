@@ -7,6 +7,7 @@ import Footer from "./components/footer/Footer";
 import Collections from "./pages/collections/Collections";
 import Favourites from "./pages/favourites/Favourites";
 import Settings from "./pages/settings/Settings";
+import { HadithContextProvider } from "./store/AppContext";
 
 function App() {
   const Layout = () => {
@@ -49,9 +50,9 @@ function App() {
   ]);
 
   return (
-    <>
+    <HadithContextProvider>
       <RouterProvider router={router} />
-    </>
+    </HadithContextProvider>
   );
 }
 

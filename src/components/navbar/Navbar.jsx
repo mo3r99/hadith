@@ -9,8 +9,12 @@ import collectionsLogo from "/src/assets/collections.png";
 import currentLogo from "/src/assets/current.png";
 import settingsLogo from "/src/assets/settings.png";
 import favouritesLogo from "/src/assets/favourites.png";
+import { useContext } from "react";
+import { HadithContext } from "../../store/AppContext";
 
 function Navbar() {
+  const currentReadingContext = useContext(HadithContext);
+
   return (
     <nav>
       <ul>
@@ -35,7 +39,7 @@ function Navbar() {
             isPending ? Styles.pending : isActive ? Styles.active : ""
           }
         >
-          <NavLink to="/hadith/al-tirmidhi/1">
+          <NavLink to={`/hadith/${currentReadingContext.bookName}/${currentReadingContext.hadithNo}`}>
             <img src={currentLogo} />
             <span>Current</span>
           </NavLink>

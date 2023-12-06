@@ -42,7 +42,7 @@ function Navbar() {
         </li>
         <li
           className={({ isActive, isPending }) =>
-            isPending ? Styles.pending : isActive ? Styles.active : ""
+            isPending ? Styles.pending + "right" : isActive ? Styles.active + "right" : "right"
           }
         >
           <NavLink to="/favourites">

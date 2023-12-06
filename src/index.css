@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Katibeh&family=Kufam&family=Quicksand:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&family=Hedvig+Letters+Serif:opsz@12..24&family=Katibeh&family=Kufam&family=Quicksand:wght@400;500;600;700&display=swap');
 
 :root {
   font-family: 'Hedvig Letters Serif', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -38,13 +38,10 @@
 
 @media screen and (max-width: 700px) {
   .active {
-    background-color: #d81159;
-    border-radius: 50%;
-    height: 70px;
-    width: 70px;
     position: relative;
-    bottom: 2em;
-    transition: all 0.3s ease;
+    bottom: 1em;
+    padding-bottom: 1em;
+    filter: brightness(95%) sepia(10) saturate(10) hue-rotate(165deg);
   }
 
   .active img,

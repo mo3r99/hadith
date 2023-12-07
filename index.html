@@ -2,12 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-ipad.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-touch-icon-ipad.png"
+    />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -26,10 +30,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hadith</title>
 
-    <link rel="manifest" href="/manifest.json">
+    <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener(
+        "touchmove",
+        function (event) {
+          if (event.scale !== 1) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+          }
+        },
+        { passive: false }
+      );
+    </script>
   </body>
 </html>

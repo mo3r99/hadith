@@ -1,0 +1,23 @@
+{
+    "short_name": "Hadith",
+    "name": "Hadith: True Meaning of the Sunnah",
+    "icons": [
+      {
+        "src": "/icon-192",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "/?source=pwa",
+    "start_url": "/?source=pwa",
+    "background_color": "#12191f",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#12191f",
+    "description": "True meaning of Sunnah"
+  }

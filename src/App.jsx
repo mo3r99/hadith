@@ -1,4 +1,6 @@
 import "./App.css";
+
+import PWAPrompt from 'react-ios-pwa-prompt'
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -51,6 +53,7 @@ function App() {
 
   return (
     <HadithContextProvider>
+      <PWAPrompt />
       <RouterProvider router={router} />
     </HadithContextProvider>
   );

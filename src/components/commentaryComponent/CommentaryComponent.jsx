@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 
+import parse from 'html-react-parser';
+
 import "./CommentaryComponent.scss";
 import { useParams } from "react-router-dom";
 
@@ -24,8 +26,9 @@ const CommentaryComponent = () => {
     const docSnap = await getDoc(docRef);
     if (docSnap.exists()) {
       let data = docSnap.data().commentary
-      
-      setCommentary(<p>{data}</p>)
+      let html = docSnap.data().html
+
+      setCommentary(<p>{parse(html)}</p>)
     } else {
       // docSnap.data() will be undefined in this case
       console.log("No such document!");

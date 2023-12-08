@@ -1,6 +1,6 @@
 import "./App.css";
 
-import PWAPrompt from 'react-ios-pwa-prompt'
+import PWAPrompt from "./components/AddToHomeScreen/PWAPrompt"
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -40,13 +40,13 @@ function App() {
           element: <Collections />,
         },
         {
-            path: "/favourites",
-            element: <Favourites />,
-          },
-          {
-            path: "/settings",
-            element: <Settings />,
-          },
+          path: "/favourites",
+          element: <Favourites />,
+        },
+        {
+          path: "/settings",
+          element: <Settings />,
+        },
       ],
     },
   ]);
